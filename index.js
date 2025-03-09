@@ -66,7 +66,7 @@ function send_data(input){
     
     // get the data from the server
     client.on('data', (data) => {
-        update_recvd_data(data);
+        update_recieved_data(data);
     });
 
     client.on('end', () => {
