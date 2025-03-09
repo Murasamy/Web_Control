@@ -18,14 +18,12 @@ function update_recieved_data(data){
     document.getElementById("gpu_temperature").innerHTML = json_data["gpu_temperature"];
     document.getElementById("disk").innerHTML = json_data["disk"];
     document.getElementById("ram").innerHTML = json_data["ram"];
-
 }
 
 function client(){
     const net = require('net');
     var input = document.getElementById("message").value;
     console.log(input);
-
     const client = net.createConnection({ port: server_port, host: server_addr }, () => {
         // 'connect' listener.
         console.log('connected to server!');
@@ -76,7 +74,6 @@ function send_data(input){
 
 // for detecting which key is been pressed w,a,s,d
 function updateKey(e) {
-
     e = e || window.event;
 
     if (e.keyCode == '87') {
